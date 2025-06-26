@@ -1,0 +1,27 @@
+body{
+    padding-top: 56px;
+    padding-bottom: 156px
+}
+
+.custom-box{
+    height: 350px;
+}
+
+.about-box{
+    padding-top: 2.5%;
+    padding-bottom: 5%;
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.custom-footer{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.hero-box{
+    height: 450px;
+}
+
