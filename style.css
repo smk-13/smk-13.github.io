@@ -1,6 +1,6 @@
 body{
     padding-top: 56px;
-    padding-bottom: 156px
+    /* padding-bottom: 156px */
 }
 
 .custom-box{
@@ -9,7 +9,7 @@ body{
 
 .about-box{
     padding-top: 2.5%;
-    padding-bottom: 5%;
+    padding-bottom: 40%;
     padding-left: 7.5%;
     padding-right: 7.5%;
     margin-left: 10%;
