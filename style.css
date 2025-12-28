@@ -25,3 +25,14 @@ body{
     height: 450px;
 }
 
+/* Remove the focus outline from the navbar toggler */
+.navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+/* Style the toggler when the navbar is expanded (not collapsed) */
+.navbar-toggler:not(.collapsed) {
+    border-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+}
