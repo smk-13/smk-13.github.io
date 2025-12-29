@@ -45,3 +45,9 @@ html {
 .resume-link:hover {
     text-decoration: underline !important;
 }
+
+.email-link:hover {
+    text-decoration: underline !important;
+}
+
+
