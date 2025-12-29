@@ -37,3 +37,11 @@ body{
     background-color: rgba(255, 255, 255, 0.1);
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px; /* Adjust based on your navbar height */
+}
+
+.resume-link:hover {
+    text-decoration: underline !important;
+}
