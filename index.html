@@ -15,7 +15,7 @@
     <!-- Navbar -->
     <nav class="navbar bg-dark fixed-top" data-bs-theme="dark">
         <div class="container px-3" style="max-width: 960px">
-            <a class="navbar-brand" href="index.html">s.k</a>
+            <a class="navbar-brand" href="index.html">sk</a>
             <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -69,16 +69,22 @@
             <!-- Featured Card 1 -->
             <div class="mb-5">
                 <div class="row g-0">
-                    <div class="col-md-12">
+                    <!-- <div class="col-md-12">
                         <img src="img/Thumbnails/asari_thumbnail_16-9.png" class="img-fluid" alt="Project thumbnail" style="aspect-ratio: 16 / 9; object-fit: cover;">
+                    </div> -->
+                    <div class="col-md-12">
+                        <video id="asgard_video" class="w-100" style="aspect-ratio: 16 / 9; object-fit: cover;" controls>
+                            <source src="videos/Asgard_video1.mp4" type="video/mp4">
+                        </video>
                     </div>
+
                     <div class="col-md-12">
                         <div class="p-3">
                             <!-- <span class="badge rounded-pill bg-primary mb-2">Featured Project</span> -->
                             <h2>Fantasy ARPG</h2>
                             <!-- <h5 class="text-muted mb-3">Set on a viking-themed stage</h5> -->
                             <p>This is my work in progress graduation project for Futuregames made in Unreal Engine, coded almost exclusively in C++.</p>
-                            <a href="project-details.html" class="btn btn-dark">Learn More</a>
+                            <a href="feature.html" class="btn btn-dark">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -362,6 +368,12 @@
 
     <script>
     document.getElementById('rigging_video').addEventListener('ended', function() {
+        this.load(); // Reloads the video, showing the poster again
+    });
+    </script>
+
+    <script>
+    document.getElementById('asgard_video').addEventListener('ended', function() {
         this.load(); // Reloads the video, showing the poster again
     });
     </script>
