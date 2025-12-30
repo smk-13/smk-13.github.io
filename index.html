@@ -253,6 +253,29 @@
             <div class="mb-5">
                 <div class="row g-0">
 
+                    <div class="col-md-6">
+                        <video id="head_video" class="w-100" style="aspect-ratio: 16 / 9; object-fit: cover;" controls poster="img/Thumbnails/simon-kramer-louheadscan-1_edited.jpg">
+                            <source src="videos/lou-hex-rig-v1-edited.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="p-3 pt-md-0">
+                            <h3>Photogrammetry</h3>
+                            <!-- <h5 class="text-muted mb-3">My Rigging Reel from 2023</h5> -->
+                            <p>High fidelity head model of my sister created with single camera photogrammetry. FACS based head rig. 
+                            </p>
+                            <a href="https://www.artstation.com/artwork/6NPZ90" class="btn btn-sm btn-dark" target="_blank">View on ArtStation</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="mb-5">
+                <div class="row g-0">
+
                     <div class="col-md-6 pb-md-3"> <!-- pb-lg-3 is an outlier to have proper spacing when in desktop mode -->
                         <div id="carouselExample1" class="carousel slide">
                             <!-- Indicators (optional dots) -->
@@ -285,10 +308,10 @@
 
                     <div class="col-md-6">
                         <div class="p-3 pt-md-0">
-                            <h3>Game Art</h3>
+                            <h3>Prop Modeling</h3>
                             <!-- <h5 class="text-muted mb-3">Prop Modeling, Photogrammetry, VFX</h5> -->
                             <p> Various game art I've experimented with.</p>
-                            <a href="https://www.artstation.com/simonkramer" class="btn btn-sm btn-dark" target="_blank">View on ArtStation</a>
+                            <a href="https://www.artstation.com/simonkramer/albums/10998200" class="btn btn-sm btn-dark" target="_blank">View on ArtStation</a>
                         </div>
                     </div>
 
@@ -397,6 +420,12 @@
 
     <script>
     document.getElementById('snake_video').addEventListener('ended', function() {
+        this.load(); // Reloads the video, showing the poster again
+    });
+    </script>
+
+    <script>
+    document.getElementById('head_video').addEventListener('ended', function() {
         this.load(); // Reloads the video, showing the poster again
     });
     </script>
