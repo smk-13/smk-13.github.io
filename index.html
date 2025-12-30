@@ -96,8 +96,13 @@
             <!-- Card 2 -->
             <div class="mb-5">
                 <div class="row g-0">
-                    <div class="col-md-6">
+                    <!-- <div class="col-md-6">
                         <img src="img/Thumbnails/skulltotem_16-9.jpg" class="img-fluid" alt="Project thumbnail" style="aspect-ratio: 16 / 9; object-fit: cover;">
+                    </div> -->
+                    <div class="col-md-6">
+                        <video id="synty_video" class="w-100" style="aspect-ratio: 16 / 9; object-fit: cover;" controls>
+                            <source src="videos/SyntyShooter_video1.mp4" type="video/mp4">
+                        </video>
                     </div>
                     <div class="col-md-6">
                         <div class="p-3 pt-md-0">
@@ -374,6 +379,12 @@
 
     <script>
     document.getElementById('asgard_video').addEventListener('ended', function() {
+        this.load(); // Reloads the video, showing the poster again
+    });
+    </script>
+
+    <script>
+    document.getElementById('synty_video').addEventListener('ended', function() {
         this.load(); // Reloads the video, showing the poster again
     });
     </script>
