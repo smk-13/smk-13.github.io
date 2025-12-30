@@ -196,9 +196,15 @@
             <div class="mb-5">
                 <div class="row g-0">
 
-                    <div class="col-md-6 pb-md-3">  <!-- pb-lg-3 is an outlier to have proper spacing when in desktop mode -->
+                    <!-- <div class="col-md-6 pb-md-3">
                         <img src="img/Snake/Snake_16-9.png" class="img-fluid" alt="Project thumbnail" 
                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover;">
+                    </div> -->
+
+                    <div class="col-md-6 pb-md-3">
+                        <video id="snake_video" class="w-100" style="aspect-ratio: 16 / 9; object-fit: cover;" controls>
+                            <source src="videos/snake_video1.mp4" type="video/mp4">
+                        </video>
                     </div>
 
                     <div class="col-md-6">
@@ -385,6 +391,12 @@
 
     <script>
     document.getElementById('synty_video').addEventListener('ended', function() {
+        this.load(); // Reloads the video, showing the poster again
+    });
+    </script>
+
+    <script>
+    document.getElementById('snake_video').addEventListener('ended', function() {
         this.load(); // Reloads the video, showing the poster again
     });
     </script>
