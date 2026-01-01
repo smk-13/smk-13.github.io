@@ -54,3 +54,13 @@ html {
     text-decoration: underline !important;
 }
 
+.brand-initials {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Change to 8px for rounded square, 0 for sharp square */
+    border: 1px solid currentColor;
+    text-align: center;
+    line-height: 36px;
+    font-weight: 600;
+}
