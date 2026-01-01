@@ -43,9 +43,9 @@
 
             <!-- Page Header -->
             <div class="mb-5 pt-4">
-                <h1 class="display-4 fw-semibold mb-3">Fantasy ARPG</h1>
+                <h1 class="display-4 fw-semibold mb-3">Viking RPG</h1>
                 <p class="lead">My work in progress graduation project for Futuregames, built in Unreal Engine and coded almost exclusively in C++.
-                    I will upated this page regularly in the coming weeks as my work on it progresses. I originally began this project using Tom Looman's Unreal Engine course as the starting point.
+                    I will update this page regularly in the coming weeks as my work on it progresses. I originally began this project using Tom Looman's Unreal Engine course as the starting point.
                     But I'm currently attending Carl Granberg's advanced gameplay course at Futuregames giving me a whole lot of new and fresh ideas.
                 </p>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
@@ -64,7 +64,7 @@
                             <source src="videos/Asgard_video2.mp4" type="video/mp4">
                         </video>
                     </div>
-                    <div class="col-md-12">
+                    <!-- <div class="col-md-12">
                         <div class="pt-3">
                             <h2 class="h3 mb-3">World Interaction System</h2>
                             <p>
@@ -80,7 +80,28 @@
                                 Then I use dot product filter to filter out the interactable object that is right in front of me and I also take the distance into account to some degree.
                             </p>
                         </div>
+                    </div> -->
+
+                    <div class="col-md-12">
+                        <div class="pt-3">
+                            <h2 class="h3 mb-3">World Interaction System</h2>
+                            <div class="multi-column-text">
+                            <p>
+                                To interact with the world, and that literally includes almost everything - from kindling a light, opening a chest,
+                                to picking up an object or talking to an NPC - I have a single all-purpose interaction interface that each interactable object can implement as it sees fit.
+                                To complement the interaction interface, I have an interaction info widget and an interaction input key. With the interaction key the player can, for example, start a conversation with an NPC.
+                            </p>
+                            <p>
+                                The environment scanner tries to detect the environment for interactable objects. As soon as it finds one, the info widget pops up,
+                                and fills the info slots with the information that the interactable object provides: the correct icon, the name, a description, and a prompt of what to do next.
+                                How good this system performs, depends on the implementation of the environment scanner. My implementation is slightly different than Tom Looman's version.
+                                First I use an overlap sphere. The overlap sphere is limited to a custom interaction channel. 
+                                Then I use dot product filter to filter out the interactable object that is right in front of me and I also take the distance into account to some degree.
+                            </p>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
             </div>
 
@@ -92,7 +113,7 @@
                             <source src="videos/Asgard_video3.mp4" type="video/mp4">
                         </video>
                     </div>
-                    <div class="col-md-12">
+                    <!-- <div class="col-md-12">
                         <div class="pt-3">
                             <h2 class="h3 mb-3">Combat System</h2>
                             <p>
@@ -111,7 +132,33 @@
                                 while a second—opening at a later frame—enables canceling into locomotion animations.
                             </p>
                         </div>
+                    </div> -->
+
+                    <div class="col-md-12">
+                        <div class="pt-3">
+                            <h2 class="h3 mb-3">Combat System</h2>
+                            <div class="multi-column-text">
+                            <p>
+                                Achieving good, fluid combat is tough. I'd say the most difficult part isn't even a programming problem,
+                                but developing an eye to distinguish good animations from bad ones.
+                                In my experience, there are three key aspects to consider: short recovery times,
+                                animations that feel symmetrical or complete, and avoiding excessive root motion.
+                            </p>
+                            <p>
+                                The second point is the least intuitive, so let me give you an example.
+                                I found that animations firing off two or three punches in sequence often work better than single punch animations.
+                                The reason is that multiple punches create a rhythmic pattern that gives a sense of completion, which you don't get with a single strike.
+                            </p>
+                            <p>
+                                Beyond selecting the right animations from the start, I implemented animation canceling to mitigate long recovery times.
+                                The simplest approach uses an animation notify state that opens and closes windows when canceling is allowed.
+                                In my system, I use two distinct windows: one allows chaining attack moves together,
+                                while a second—opening at a later frame—enables canceling into locomotion animations.
+                            </p>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
             </div>
 

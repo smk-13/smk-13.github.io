@@ -64,3 +64,10 @@ html {
     line-height: 36px;
     font-weight: 600;
 }
+
+@media (min-width: 768px) {
+    .multi-column-text {
+        column-count: 2;
+        column-gap: 2rem;
+    }
+}
