@@ -132,3 +132,31 @@ html {
     left: 0;
     color: #6b6b6b;
 }
+
+.code-example {
+    background-color: #f5f5f5;
+    border: 1px solid #d4cfbf;
+    border-radius: 20px;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    overflow-x: auto;
+}
+
+.code-example pre {
+    margin: 0;
+    font-family: 'Courier New', Consolas, monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.code-example code {
+    color: #2c2c2c;
+}
+
+/* Syntax highlighting - balanced for light background */
+.keyword { color: #0033b3; font-weight: 500; }      /* Darker blue for keywords */
+.comment { color: #008000; font-style: italic; }    /* Green for comments (works well) */
+.method { color: #795e26; font-weight: 500; }       /* Brown for methods */
+.property { color: #0451a5; }                        /* Medium blue for properties */
+.operator { color: #2c2c2c; }                        /* Dark gray for operators */
+.number { color: #09885a; }                          /* Darker teal for numbers */
