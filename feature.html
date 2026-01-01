@@ -26,7 +26,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto">
-                    <a class="nav-link" href="index.html#featured-work">Featured Project</a>
+                    <a class="nav-link" href="feature.html">Featured Project</a>
                     <a class="nav-link" href="index.html#game-development">Game Development</a>
                     <a class="nav-link" href="index.html#previous-work">Previous Work</a>
                     <a class="nav-link" href="index.html#contact">Contact</a>
@@ -35,6 +35,25 @@
             </div>
         </div>
     </nav>
+
+    <!-- Breadcrumb -->
+    <div class="container px-3 pt-5" style="max-width: 960px;">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb custom-breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="index.html#featured-work">Featured Project</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Viking RPG</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Page Navigation (anchor links) -->
+    <div class="container px-3 mb-4" style="max-width: 960px;">
+        <div class="page-nav">
+            <a href="#world-interaction">World Interaction System</a>
+            <a href="#combat-system">Combat System</a>
+        </div>
+    </div>
 
     <!-- Main -->
     <main class="flex-grow-1">
@@ -57,7 +76,7 @@
             <hr class="my-4">
 
             <!-- World Interaction System -->
-            <div class="mb-5">
+            <div id="world-interaction" class="mb-5">
                 <div class="row g-0">
                     <div class="col-md-12">
                         <video class="auto-reload-video w-100" style="aspect-ratio: 16 / 9; object-fit: cover;" controls>
@@ -97,8 +116,11 @@
                 </div>
             </div>
 
-            <!-- Combat Moves -->
-            <div class="mb-5">
+            <!-- Separator -->
+            <hr class="my-4">
+
+            <!-- Combat System -->
+            <div id="combat-system" class="mb-5">
                 <div class="row g-0">
                     <div class="col-md-12">
                         <video class="auto-reload-video w-100" style="aspect-ratio: 16 / 9; object-fit: cover;" controls>
@@ -133,9 +155,21 @@
                 </div>
             </div>
 
+            <!-- Credits -->
             <hr class="my-4">
             <div class="mb-5">
                 <h2 class="h4 mb-3">Credits & Assets</h2>
+                
+                <h5 class="mt-4 mb-2 text-muted fw-normal">Resources</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <strong>Professional Game Development in C++ and Unreal Engine</strong> (Course) - 
+                        Tom Looman, 
+                        <a href="https://courses.tomlooman.com/" target="_blank" class="text-dark text-decoration-none course-link">courses.tomlooman.com</a>
+                    </li>
+                </ul>
+                
+                <h5 class="mt-4 mb-2 text-muted fw-normal">Assets</h5>
                 <ul class="list-unstyled">
                     <li class="mb-2"><strong>Viking Girl</strong> (Character Model) - Dary Palasky, 2022</li>
                     <li class="mb-2"><strong>Frank Slash Pack</strong> (Animation Pack) - Frank Climax, 2023</li>
@@ -144,10 +178,9 @@
                     <li class="mb-2"><strong>Flat Icons Collection</strong> (UI Assets) - OneLittleFeather, 2025</li>
                     <li class="mb-2"><strong>VFX Backgrounds</strong> (VFX) - FX Cat UA, 2021</li>
                 </ul>
-                <p class="small text-muted">All assets used under their respective licenses from the Unreal Engine Marketplace.</p>
+                
+                <p class="small text-muted mt-3">All assets used under their respective licenses from the Unreal Engine Marketplace.</p>
             </div>
-
-        </div>
 
 
 
