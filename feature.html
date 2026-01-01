@@ -64,40 +64,32 @@
                             <source src="videos/Asgard_video2.mp4" type="video/mp4">
                         </video>
                     </div>
-                    <!-- <div class="col-md-12">
-                        <div class="pt-3">
-                            <h2 class="h3 mb-3">World Interaction System</h2>
-                            <p>
-                                To interact with the world, and that literally includes almost everything - from kindling a light, opening a chest,
-                                to picking up an object or talking to an NPC - I have a single all-purpose interaction interface that each interactable object can implement as it sees fit.
-                                To complement the interaction interface, I have an interaction info widget and an interaction input key. With the interaction key the player can, for example, start a conversation with an NPC.
-                            </p>
-                            <p>
-                                The environment scanner tries to detect the environment for interactable objects. As soon as it finds one, the info widget pops up,
-                                and fills the info slots with the information that the interactable object provides: the correct icon, the name, a description, and a prompt of what to do next.
-                                How good this system performs, depends on the implementation of the environment scanner. My implementation is slightly different than Tom Looman's version.
-                                First I use an overlap sphere. The overlap sphere is limited to a custom interaction channel. 
-                                Then I use dot product filter to filter out the interactable object that is right in front of me and I also take the distance into account to some degree.
-                            </p>
-                        </div>
-                    </div> -->
-
                     <div class="col-md-12">
                         <div class="pt-3">
                             <h2 class="h3 mb-3">World Interaction System</h2>
                             <div class="multi-column-text">
                             <p>
-                                To interact with the world, and that literally includes almost everything - from kindling a light, opening a chest,
-                                to picking up an object or talking to an NPC - I have a single all-purpose interaction interface that each interactable object can implement as it sees fit.
-                                To complement the interaction interface, I have an interaction info widget and an interaction input key. With the interaction key the player can, for example, start a conversation with an NPC.
+                                To interact with the world—and that includes almost everything,
+                                from kindling a light and opening chests to picking up objects
+                                or talking to NPCs—I implemented a single, all-purpose interaction
+                                interface that each interactable object can customize as needed.
+                                To complement this interface, I created an interaction info widget
+                                and an interaction input key that allows players to initiate actions,
+                                such as starting a conversation with an NPC.
                             </p>
                             <p>
-                                The environment scanner tries to detect the environment for interactable objects. As soon as it finds one, the info widget pops up,
-                                and fills the info slots with the information that the interactable object provides: the correct icon, the name, a description, and a prompt of what to do next.
-                                How good this system performs, depends on the implementation of the environment scanner. My implementation is slightly different than Tom Looman's version.
-                                First I use an overlap sphere. The overlap sphere is limited to a custom interaction channel. 
-                                Then I use dot product filter to filter out the interactable object that is right in front of me and I also take the distance into account to some degree.
+                                The environment scanner continuously detects nearby interactable objects.
+                                When it finds one, the info widget appears and populates its slots with data
+                                provided by the object: the appropriate icon, name, description, and action prompt.
+                                The system's performance depends heavily on how the environment scanner is implemented.
                             </p>
+                            <p>
+                                My implementation differs slightly from Tom Looman's approach. I use an overlap sphere
+                                limited to a custom interaction channel, then apply a dot product filter to identify
+                                the object directly in front of the player while also factoring in distance.
+                                This ensures the most relevant interaction is always prioritized.
+                            </p>
+
                             </div>
                         </div>
                     </div>
@@ -113,27 +105,6 @@
                             <source src="videos/Asgard_video3.mp4" type="video/mp4">
                         </video>
                     </div>
-                    <!-- <div class="col-md-12">
-                        <div class="pt-3">
-                            <h2 class="h3 mb-3">Combat System</h2>
-                            <p>
-                                Achieving good, fluid combat is tough. I'd say the most difficult part isn't even a programming problem,
-                                but developing an eye to distinguish good animations from bad ones.
-                                In my experience, there are three key aspects to consider: short recovery times,
-                                animations that feel symmetrical or complete, and avoiding excessive root motion.
-                                The second point is the least intuitive, so let me give you an example.
-                                I found that animations firing off two or three punches in sequence often work better than single punch animations.
-                                The reason is that multiple punches create a rhythmic pattern that gives a sense of completion, which you don't get with a single strike.
-                            </p>
-                            <p>
-                                Beyond selecting the right animations from the start, I implemented animation canceling to mitigate long recovery times.
-                                The simplest approach uses an animation notify state that opens and closes windows when canceling is allowed.
-                                In my system, I use two distinct windows: one allows chaining attack moves together,
-                                while a second—opening at a later frame—enables canceling into locomotion animations.
-                            </p>
-                        </div>
-                    </div> -->
-
                     <div class="col-md-12">
                         <div class="pt-3">
                             <h2 class="h3 mb-3">Combat System</h2>
