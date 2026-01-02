@@ -39,8 +39,8 @@
             <div class="row g-0 pt-5 text-center">
                 <!-- Text column (2/3) -->
                 <div class="col-md-12">
-                    <h1 class="display-3" style="font-weight: 600; margin-bottom: 0.25rem;">Simon Kramer</h1>
-                    <h2 class="h2" style="font-weight: 300; margin-bottom: 1.0rem;">Gameplay Programmer</h2>
+                    <h1 class="display-1" style="font-weight: 600; margin-bottom: 0.25rem;">Simon Kramer</h1>
+                    <h2 class="h1" style="font-weight: 300; margin-bottom: 1.0rem;">Gameplay Programmer</h2>
                     <div>
                         <a href="about.html" class="btn btn-dark rounded-pill me-3">About Me</a>
                         <a href="CV/Resume_Simon_Kramer_2025.pdf" class="h6 text-decoration-none resume-link"
@@ -54,9 +54,10 @@
                     </div>
                 </div>
                 <!-- Image column (1/3) - Optional profile picture -->
-                <div class="col-md-4 d-flex align-items-center justify-content-center">
-                    <!-- <img src="img/Photos/IMG_20240305_154208.jpg" class="rounded-circle" alt="Simon Kramer" style="width: 150px; height: 150px; object-fit: cover;"> -->
-                </div>
+                <!-- <div class="col-md-4 d-flex align-items-center justify-content-center">
+                    <img src="img/Photos/preview_DL01000079.jpeg" class="rounded-circle mb-4" alt="Simon Kramer" 
+                        style="width: 150px; height: 150px; object-fit: cover; object-position: -40px 0px;">
+                </div> -->
             </div>
         </div>
 
@@ -69,26 +70,35 @@
             <!-- Featured Card 1 -->
             <div class="mb-5">
                 <div class="row g-0">
+
+                    <!-- Video -->
                     <div class="col-md-12">
                         <video id="asgard_video" class="auto-reload-video w-100" style="aspect-ratio: 16 / 9; object-fit: cover;" controls>
                             <source src="videos/Asgard_video1.mp4" type="video/mp4">
                         </video>
                     </div>
 
+                    <!-- Descripton -->
                     <div class="col-md-12">
-                        <div class="p-3">
-                            <h2>Viking RPG</h2>
-                            <p>This is my work in progress graduation project for Futuregames made in Unreal Engine, coded almost exclusively in C++.</p>
+                        <div class="py-3">
+                            <h2 class="h1 fw-bold" >Viking RPG</h2>
+                            <div class="fs-6">
+                            <p>
+                               My work in progress graduation project for Futuregames, built in Unreal Engine and coded almost exclusively in C++.
+                               I will update this page regularly in the coming weeks as my work on it progresses. 
+                            </p>
+                            </div>
                             <a href="feature.html" class="btn btn-dark">Learn More</a>
                         </div>
                     </div>
+
                 </div>
             </div>
 
             <hr class="my-1">
             <h2 id="game-development" class="display-6 fw-light mb-4">Game Development</h2>
 
-            <!-- New Card (TODO: Redo card numbering) -->
+            <!-- Card 2 -->
             <div class="mb-5">
                 <div class="row g-0">
                     <div class="col-md-6">
@@ -101,71 +111,18 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="p-3 pt-md-0">
-                            <h3>Action Stack for Unreal Engine</h3>
-                            <!-- <h5 class="text-muted mb-3">Unreal Engine C++ Plugin</h5> -->
-                            <p>This is the Action Stack developed by Carl Granberg, who is our gameplay programming teacher at Futuregames.
-                                He wrote his original version for Unity in C#. I converted it for use in Unreal Engine and C++.
-                                The code is functionally the same, but with some architectural changes to account for
-                                differences between the two game engines.</p>
+                        <div class="py-3 px-0 ps-md-3 py-md-0">
+                            <h3 class="fw-bold">Action Stack for Unreal Engine</h3>
+                            <div class="fs-6">
+                            <p> Action Stack originally developed by Carl Granberg for Unity / C# converted for use in Unreal Engine / C++.</p>
+                            </div>
                             <a href="https://github.com/smk-13/Bifrost" class="btn btn-sm btn-dark" target="_blank">View on GitHub</a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Card 2 -->
-            <div class="mb-5">
-                <div class="row g-0">
-                    <!-- <div class="col-md-6">
-                        <img src="img/Thumbnails/skulltotem_16-9.jpg" class="img-fluid" alt="Project thumbnail" style="aspect-ratio: 16 / 9; object-fit: cover;">
-                    </div> -->
-                    <div class="col-md-6">
-                        <video id="synty_video" class="auto-reload-video w-100" style="aspect-ratio: 16 / 9; object-fit: cover;" controls>
-                            <source src="videos/SyntyShooter_video1.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="p-3 pt-md-0">
-                            <h3>Synty Shooter</h3>
-                            <!-- <h5 class="text-muted mb-3">Role or Subtitle</h5> -->
-                            <p>This project is based on TheKiwiCoder's work using Synty assets. 
-                                With Unity 6 introducing Cinemachine 3, it was no longer possible to 
-                                follow his tutorial step-by-step to recreate the laser gun setup 
-                                featuring a triple-layered weapon recoil system. I developed a 
-                                straightforward upgrade path to Cinemachine 3 that maintains the 
-                                original three-layer recoil approach. </p>
-                            <a href="shooter.html" class="btn btn-sm btn-dark">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <!-- Card 3 -->
-            <div class="mb-5">
-                <div class="row g-0">
-
-                    <div class="col-md-6 pb-md-3">
-                        <video id="snake_video" class=" auto-reload-video w-100" style="aspect-ratio: 16 / 9; object-fit: cover;" controls>
-                            <source src="videos/snake_video1.mp4" type="video/mp4">
-                        </video>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="p-3 pt-md-0">
-                            <h3>Snake</h3>
-                            <p>This little program features the classic snake game and a snake simulation.
-                                It uses a linked list to connect the snake's tail segments to one another
-                                and the A* pathfinding algorithm to navigate across the grid.
-                            </p>
-                            <a href="https://smk1302.itch.io/snake" class="btn btn-sm btn-dark" target="_blank">View on Itch</a>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-
-            <!-- Card 4 -->
             <div class="mb-5">
                 <div class="row g-0">
 
@@ -204,11 +161,55 @@
 
                     <!-- Content with dynamic button -->
                     <div class="col-md-6">
-                        <div class="p-3 pt-md-0">
-                            <h3>Team Projects</h3>
-                            <!-- <h5 class="text-muted mb-3">Team Projects</h5> -->
+                        <div class="py-3 px-0 ps-md-3 py-md-0">
+                            <h3 class="fw-bold">Team Projects</h3>
+                            <div class="fs-6">
                             <p>Over the course of my education at Futuregames, I participated in four different group projects as part of the programming team.</p>
+                            </div>
                             <a id="dynamicLink" href="https://futuregames.itch.io/gunsmoke-grimoires" class="btn btn-sm btn-dark" target="_blank">View on Itch</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="mb-5">
+                <div class="row g-0">
+                    <div class="col-md-6">
+                        <video id="synty_video" class="auto-reload-video w-100" style="aspect-ratio: 16 / 9; object-fit: cover;" controls>
+                            <source src="videos/SyntyShooter_video1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="py-3 px-0 ps-md-3 py-md-0">
+                            <h3 class="fw-bold">Shooter</h3>
+                            <div class="fs-6">
+                            <p>Update of TheKiwiCoder's weapon recoil system for Cinemachine 3 in Unity.</p>
+                            </div>
+                            <a href="shooter.html" class="btn btn-sm btn-dark">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="mb-5">
+                <div class="row g-0">
+                    <div class="col-md-6 pb-md-3">
+                        <video id="snake_video" class=" auto-reload-video w-100" style="aspect-ratio: 16 / 9; object-fit: cover;" controls>
+                            <source src="videos/snake_video1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="py-3 px-0 ps-md-3 py-md-0">
+                            <h3 class="fw-bold">Snake Simulation</h3>
+                            <div class="fs-6">
+                            <p>
+                                Snake simulation using a linked list to connect the snake's tail segments to one another
+                                and A* pathfinding to navigate across the grid.
+                            </p>
+                            </div>
+                            <a href="https://smk1302.itch.io/snake" class="btn btn-sm btn-dark" target="_blank">View on Itch</a>
                         </div>
                     </div>
                 </div>
@@ -216,10 +217,12 @@
 
 
 
+
+
             <hr class="my-1">
             <h2 id="previous-work" class="display-6 fw-light mb-4">Previous Work</h2>
 
-            <!-- Card 5 -->
+            <!-- Card 6 -->
             <div class="mb-5">
                 <div class="row g-0">
 
@@ -230,11 +233,12 @@
                     </div>
 
                     <div class="col-md-6">
-                        <div class="p-3 pt-md-0">
-                            <h3>Photogrammetry</h3>
-                            <p>Head model created with single camera photogrammetry and retopologized in Wrap3 using Epic Games Metahuman topology.
-                                Blendshape deltas procedurally calculated from Metahuman in Wrap3. Custom designed head rig based on the Facial Action Coding System.
-                            </p>
+                        <div class="py-3 px-0 ps-md-3 py-md-0">
+                            <h3 class="fw-bold">Photogrammetry</h3>
+                            <div class="fs-6">
+                            <p>Head model created with single camera photogrammetry and retopologized in Wrap3.
+                                Facial Rig based on the Facial Action Coding System.</p>
+                            </div>
                             <a href="https://www.artstation.com/artwork/6NPZ90" class="btn btn-sm btn-dark" target="_blank">View on ArtStation</a>
                         </div>
                     </div>
@@ -242,7 +246,7 @@
                 </div>
             </div>
 
-            <!-- Card 6 -->
+            <!-- Card 7 -->
             <div class="mb-5">
                 <div class="row g-0">
 
@@ -253,12 +257,12 @@
                     </div>
 
                     <div class="col-md-6">
-                        <div class="p-3 pt-md-0">
-                            <h3>Rigging</h3>
-                            <!-- <h5 class="text-muted mb-3">My Rigging Reel from 2023</h5> -->
-                            <p>Before I've started my education at Futuregames specializing in gameplay programming, I've focused on rigging work
-                                ranging from the creation of control rigs, Python scripting in Maya and character skinning with ngSkinTools.
+                        <div class="py-3 px-0 ps-md-3 py-md-0">
+                            <h3 class="fw-bold">Rigging</h3>
+                            <div class="fs-6">
+                            <p>My rigging reel from 2023.
                             </p>
+                            </div>
                             <a href="https://www.youtube.com/watch?v=r-erg-8K7us" class="btn btn-sm btn-dark" target="_blank">Watch on Youtube</a>
                         </div>
                     </div>
@@ -268,7 +272,7 @@
 
 
 
-            <!-- Card 7 -->
+            <!-- Card 8 -->
             <div class="mb-5">
                 <div class="row g-0">
 
@@ -304,9 +308,12 @@
                     </div>
 
                     <div class="col-md-6">
-                        <div class="p-3 pt-md-0">
-                            <h3>Modeling</h3>
-                            <p> Various game art I've experimented with.</p>
+                        <div class="py-3 px-0 ps-md-3 py-md-0">
+                            <h3 class="fw-bold">Prop Modeling</h3>
+                            <div class="fs-6">
+                            <p> I took CGMA's Intro to Production Modeling course in 2023
+                                covering various modeling techniques and the process of clean UV-Unwrapping</p>
+                            </div>
                             <a href="https://www.artstation.com/simonkramer/albums/10998200" class="btn btn-sm btn-dark" target="_blank">View on ArtStation</a>
                         </div>
                     </div>
@@ -339,7 +346,6 @@
                     <div class="d-flex justify-content-center gap-3 flex-wrap">
                         <a href="https://www.linkedin.com/in/simon-m-kramer/" class="btn btn-outline-dark" target="_blank">LinkedIn</a>
                         <a href="https://github.com/smk-13" class="btn btn-outline-dark" target="_blank">GitHub</a>
-                        <!-- <a href="https://www.artstation.com/simonkramer" class="btn btn-outline-dark" target="_blank">ArtStation</a> -->
                     </div>
                 </div>
             </div>
@@ -369,13 +375,6 @@
                                 d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
                         </svg>
                     </a>
-                    <!-- <a href="https://www.artstation.com/simonkramer" class="text-decoration-none pe-4" target="_blank">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill=#adb5bd role="img" xmlns="http://www.w3.org/2000/svg">
-                            <title>ArtStation</title>
-                            <path
-                                d="m0 17.723 2.027 3.505h.001a2.424 2.424 0 0 0 2.164 1.333h13.457l-2.792-4.838H0zm24 .025c0-.484-.143-.935-.388-1.314L15.728 2.728a2.424 2.424 0 0 0-2.142-1.289H9.419L21.598 22.54l1.92-3.325c.378-.637.482-.919.482-1.467zm-11.129-3.462L7.428 4.858l-5.444 9.428h10.887z" />
-                        </svg>
-                    </a> -->
                     <a href="mailto:simonmaximiliankramer13@gmail.com" class="text-decoration-none" target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill=#adb5bd class="bi bi-envelope"
                             viewBox="0 0 16 16">
