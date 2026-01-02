@@ -19,7 +19,7 @@
     
     <!-- Navbar -->
     <nav class="navbar bg-dark fixed-top" data-bs-theme="dark">
-        <div class="container px-3" style="max-width: 960px">
+        <div class="container px-3" style="max-width: 768px">
             <a class="navbar-brand" href="index.html">sk</a>
             <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -39,7 +39,7 @@
     <!-- Main -->
     <main class="flex-grow-1">
 
-        <div class="container-fluid px-3" style="max-width: 960px;">
+        <div class="container-fluid px-3" style="max-width: 768px;">
 
             <!-- Page Header -->
             <div class="mb-5 pt-4">
@@ -65,7 +65,7 @@
                     <source src="videos/SyntyShooter_video1.mp4" type="video/mp4">
                 </video>
                 <div class="pt-3">
-                    <h2 class="h3 mb-3 fw-bold">Weapon Recoil in Cinemachine 3</h2>
+                    <h2 class="h3 mb-3 fw-bold">Weapon Recoil</h2>
                     <div class="fs-6">
                         <p>
                             The weapon recoil system combines three elements:
@@ -79,17 +79,16 @@
                             aim downward to stabilize.
                         </p>
                     </div>
-                </div>
-                <!-- Code Snippet -->
-                <div class="mt-3">
-                    <button class="btn btn-outline-secondary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#codeSnippet" aria-expanded="false" aria-controls="codeSnippet">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
-                            <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z"/>
-                        </svg>
-                        View Code
-                    </button>
-                    <div class="collapse mt-3" id="codeSnippet">
-                        <div class="code-example">
+                    <!-- Code Snippet -->
+                    <div class="mt-3">
+                        <button class="btn btn-outline-secondary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#codeSnippet" aria-expanded="false" aria-controls="codeSnippet">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
+                                <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z"/>
+                            </svg>
+                            View Code
+                        </button>
+                        <div class="collapse mt-3" id="codeSnippet">
+                            <div class="code-example">
 <pre><code><span class="comment">// Smoothly apply recoil displacement over the step time</span>
 <span class="keyword">private</span> <span class="keyword">void</span> <span class="method">PlaybackRecoil</span>()
 {
@@ -104,9 +103,11 @@
         recoilTimer <span class="operator">-=</span> Time.deltaTime;
     }
 }</code></pre>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
 
             <hr class="my-4">
@@ -138,7 +139,7 @@
 
     <!-- Footer -->
     <footer class="bg-dark py-4">
-        <div class="container px-3" style="max-width: 960px;">
+        <div class="container px-3" style="max-width: 768px;">
             <div class="d-flex justify-content-between align-items-center">
                 <p class="mb-0 text-white-50">&copy; 2025 Simon Kramer</p>
                 <div>

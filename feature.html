@@ -14,7 +14,7 @@
     
     <!-- Navbar -->
     <nav class="navbar bg-dark fixed-top" data-bs-theme="dark">
-        <div class="container px-3" style="max-width: 960px">
+        <div class="container px-3" style="max-width: 768px">
             <a class="navbar-brand" href="index.html">sk</a>
             <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -32,7 +32,7 @@
     </nav>
 
     <!-- Breadcrumb -->
-    <div class="container px-3 pt-5" style="max-width: 960px;">
+    <div class="container px-3 pt-5" style="max-width: 768px;">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb custom-breadcrumb fs-5">
                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
@@ -43,7 +43,7 @@
     </div>
 
     <!-- Page Navigation (anchor links) -->
-    <div class="container px-3 mb-4" style="max-width: 960px;">
+    <div class="container px-3 mb-4" style="max-width: 768px;">
         <div class="page-nav fs-5">
             <a href="#world-interaction">World Interaction System</a>
             <a href="#combat-system">Combat System</a>
@@ -53,7 +53,7 @@
     <!-- Main -->
     <main class="flex-grow-1">
 
-            <div class="container-fluid px-3" style="max-width: 960px;">
+            <div class="container-fluid px-3" style="max-width: 768px;">
 
                 <!-- Page Header -->
                 <div class="mb-5 pt-4">
@@ -99,18 +99,17 @@
                                 the object directly in front of the player while also factoring in distance.
                             </p>
                         </div>
-                    </div>
 
-                    <!-- Code Snippet -->
-                    <div class="mt-3">
-                        <button class="btn btn-outline-secondary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#codeSnippet" aria-expanded="false" aria-controls="codeSnippet">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
-                                <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z"/>
-                            </svg>
-                            View Code
-                        </button>
-                        <div class="collapse mt-3" id="codeSnippet">
-                            <div class="code-example">
+                        <!-- Code Snippet -->
+                        <div class="mt-3">
+                            <button class="btn btn-outline-secondary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#codeSnippet" aria-expanded="false" aria-controls="codeSnippet">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
+                                    <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z"/>
+                                </svg>
+                                View Code
+                            </button>
+                            <div class="collapse mt-3" id="codeSnippet">
+                                <div class="code-example">
 <pre><code><span class="comment">// Spatial partitioning with overlap sphere, then filtering by dot product</span>
 <span class="keyword">void</span> UAsgardInteractionComponent::<span class="method">UpdateBestInteractable</span>()
 {
@@ -173,9 +172,13 @@
         }
     }
 }</code></pre>
+                                </div>
                             </div>
                         </div>
+
                     </div>
+
+
 
                 </div>
 
@@ -195,8 +198,6 @@
                                 but developing an eye to distinguish good animations from bad ones.
                                 In my experience, there are three key aspects to consider: short recovery times,
                                 animations that feel symmetrical or complete, and avoiding excessive root motion.
-                            </p>
-                            <p>
                                 I found that animations firing off two or three punches in sequence often work better than single punch animations.
                                 The reason is that multiple punches create a rhythmic pattern that gives a sense of completion, which you don't get with a single strike.
                             </p>
@@ -243,7 +244,7 @@
 
     <!-- Footer -->
     <footer class="bg-dark py-4">
-        <div class="container px-3" style="max-width: 960px;">
+        <div class="container px-3" style="max-width: 768px;">
             <div class="d-flex justify-content-between align-items-center">
                 <p class="mb-0 text-white-50">&copy; 2025 Simon Kramer</p>
                 <div>
@@ -263,13 +264,6 @@
                                 d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
                         </svg>
                     </a>
-                    <!-- <a href="https://www.artstation.com/simonkramer" class="text-decoration-none pe-4" target="_blank">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill=#adb5bd role="img" xmlns="http://www.w3.org/2000/svg">
-                            <title>ArtStation</title>
-                            <path
-                                d="m0 17.723 2.027 3.505h.001a2.424 2.424 0 0 0 2.164 1.333h13.457l-2.792-4.838H0zm24 .025c0-.484-.143-.935-.388-1.314L15.728 2.728a2.424 2.424 0 0 0-2.142-1.289H9.419L21.598 22.54l1.92-3.325c.378-.637.482-.919.482-1.467zm-11.129-3.462L7.428 4.858l-5.444 9.428h10.887z" />
-                        </svg>
-                    </a> -->
                     <a href="mailto:simonmaximiliankramer13@gmail.com" class="text-decoration-none" target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill=#adb5bd class="bi bi-envelope"
                             viewBox="0 0 16 16">
