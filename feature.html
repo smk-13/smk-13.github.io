@@ -47,7 +47,8 @@
         <div class="page-nav fs-5">
             <a href="#world-interaction">World Interaction System</a>
             <a href="#combat-system">Combat System</a>
-            <a href="#manage-health">Dealing Damage</a>
+            <a href="#manage-health">Manage Health</a>
+            <a href="#deal-damage">Deal Damage</a>
         </div>
     </div>
 
@@ -76,8 +77,8 @@
                     <video class="auto-reload-video w-100" style="aspect-ratio: 16 / 9; object-fit: cover;" controls>
                         <source src="videos/Asgard_video2.mp4" type="video/mp4">
                     </video>
-                    
                     <div class="pt-3">
+                        <!-- Text -->
                         <h2 class="h3 mb-3 fw-bold">World Interaction System</h2>
                         <div class="fs-6">
                             <p>
@@ -100,7 +101,6 @@
                                 the object directly in front of the player while also factoring in distance.
                             </p>
                         </div>
-
                         <!-- Code Snippet -->
                         <div class="mt-3">
                             <button class="btn btn-outline-secondary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#codeSnippetInteraction" aria-expanded="false" aria-controls="codeSnippetInteraction">
@@ -176,11 +176,7 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
-
-
                 </div>
 
                 <hr class="my-5">
@@ -212,14 +208,13 @@
 
                     </div>
                 </div>
-
                 <hr class="my-3">
 
                 <!-- Health -->
                 <div id="manage-health" class="mb-5">
-                    
                     <div class="">
-                        <h2 class="h3 mb-3 fw-bold">Dealing Damage</h2>
+                        <!-- Text -->
+                        <h2 class="h3 mb-3 fw-bold">Managing Health</h2>
                         <div class="fs-6">
                             <p>
                                 Do we manage health with a damageable interface or with a health component? I think the best approach is to have to both
@@ -228,7 +223,6 @@
                                 Other damage related tasks like hit reaction or hit visual effects are handled outside the health component.
                             </p>
                         </div>
-
                         <!-- Code Snippet -->
                         <div class="mt-3">
                             <button class="btn btn-outline-secondary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#codeSnippetHealth" aria-expanded="false" aria-controls="codeSnippetHealth">
@@ -281,8 +275,16 @@
 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <hr class="my-3">
 
-                        <div class="fs-6 mt-5">
+                <!-- Damage -->
+                <div id="deal-damage" class="mb-5">
+                    <div class="">
+                        <!-- Text -->
+                        <h2 class="h3 mb-3 fw-bold">Dealing Damage</h2>
+                        <div class="fs-6">
                             <p>
                                 To deal damage I use the hitbox method. The hitbox is part of my weapon class.
                                 The hitbox is activated and deactivated by an anim notify state that the attack animation has to set in order to deal damage.
@@ -290,7 +292,6 @@
                                 The aforementioned damageable interface is what registers legal hit targets.
                             </p>
                         </div>
-
                         <!-- Code Snippet -->
                         <div class="mt-3">
                             <button class="btn btn-outline-secondary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#codeSnippetMelee" aria-expanded="false" aria-controls="codeSnippetMelee">
@@ -350,11 +351,8 @@
 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
-
-
                 <hr class="my-4">
 
                 <!-- Credits -->
