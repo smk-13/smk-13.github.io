@@ -21,11 +21,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto">
-                    <a class="nav-link" href="feature.html">Featured Project</a>
+                    <a class="nav-link active" href="feature.html">Featured Project</a>
                     <a class="nav-link" href="index.html#game-development">Game Development</a>
                     <a class="nav-link" href="index.html#previous-work">Previous Work</a>
                     <a class="nav-link" href="index.html#contact">Contact</a>
-                    <a class="nav-link active" href="about.html">About Me</a>
+                    <a class="nav-link" href="about.html">About Me</a>
                 </div>
             </div>
         </div>
@@ -47,6 +47,7 @@
         <div class="page-nav fs-5">
             <a href="#world-interaction">World Interaction System</a>
             <a href="#combat-system">Combat System</a>
+            <a href="#manage-health">Dealing Damage</a>
         </div>
     </div>
 
@@ -102,13 +103,13 @@
 
                         <!-- Code Snippet -->
                         <div class="mt-3">
-                            <button class="btn btn-outline-secondary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#codeSnippet" aria-expanded="false" aria-controls="codeSnippet">
+                            <button class="btn btn-outline-secondary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#codeSnippetInteraction" aria-expanded="false" aria-controls="codeSnippetInteraction">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
                                     <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z"/>
                                 </svg>
                                 View Code
                             </button>
-                            <div class="collapse mt-3" id="codeSnippet">
+                            <div class="collapse mt-3" id="codeSnippetInteraction">
                                 <div class="code-example">
 <pre><code><span class="comment">// Spatial partitioning with overlap sphere, then filtering by dot product</span>
 <span class="keyword">void</span> UAsgardInteractionComponent::<span class="method">UpdateBestInteractable</span>()
@@ -208,8 +209,151 @@
                                 while a second—opening at a later frame—enables canceling into locomotion.
                             </p>
                         </div>
+
                     </div>
                 </div>
+
+                <hr class="my-3">
+
+                <!-- Health -->
+                <div id="manage-health" class="mb-5">
+                    
+                    <div class="">
+                        <h2 class="h3 mb-3 fw-bold">Dealing Damage</h2>
+                        <div class="fs-6">
+                            <p>
+                                Do we manage health with a damageable interface or with a health component? I think the best approach is to have to both
+                                with the health component being part of the spefic implementation of the damageable interface for characters.
+                                The health component handles lifeloss, lifegain, and broadcasts health changes and the event of death, that the UI can interface with.
+                                Other damage related tasks like hit reaction or hit visual effects are handled outside the health component.
+                            </p>
+                        </div>
+
+                        <!-- Code Snippet -->
+                        <div class="mt-3">
+                            <button class="btn btn-outline-secondary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#codeSnippetHealth" aria-expanded="false" aria-controls="codeSnippetHealth">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
+                                    <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z"/>
+                                </svg>
+                                Health Component
+                            </button>
+                            <div class="collapse mt-3" id="codeSnippetHealth">
+<div class="code-example">
+<pre><code><span class="comment">// Health system with damage and healing support</span>
+<span class="keyword">float</span> UAsgardHealthComponent::<span class="method">TakeDamage</span>(<span class="keyword">float</span> Damage, AActor* Instigator)
+{
+    <span class="comment">// If dead, don't process damage</span>
+    <span class="keyword">if</span> (CurrentHealth &lt;= <span class="number">0.0f</span>)
+    {
+        <span class="keyword">return</span> <span class="number">0.0f</span>;
+    }
+    
+    <span class="keyword">float</span> PreviousHealth = CurrentHealth;
+    CurrentHealth = FMath::<span class="method">Max</span>(<span class="number">0.0f</span>, CurrentHealth - Damage);
+    <span class="keyword">float</span> Delta = PreviousHealth - CurrentHealth;
+    
+    OnHealthChanged.<span class="method">Broadcast</span>(<span class="keyword">this</span>, CurrentHealth, MaxHealth, Delta, Instigator);
+    
+    <span class="keyword">if</span> (CurrentHealth &lt;= <span class="number">0.0f</span>)
+    {
+        OnDeath.<span class="method">Broadcast</span>(<span class="keyword">this</span>, Instigator);
+    }
+    
+    <span class="keyword">return</span> Delta;
+}
+
+<span class="keyword">float</span> UAsgardHealthComponent::<span class="method">Heal</span>(<span class="keyword">float</span> Amount, AActor* Instigator, <span class="keyword">bool</span> bAllowRevive)
+{
+    <span class="comment">// If dead, stay dead unless revive is allowed</span>
+    <span class="keyword">if</span> (CurrentHealth &lt;= <span class="number">0.0f</span> &amp;&amp; !bAllowRevive)
+    {
+        <span class="keyword">return</span> <span class="number">0.0f</span>;
+    }
+    
+    <span class="keyword">float</span> PreviousHealth = CurrentHealth;
+    CurrentHealth = FMath::<span class="method">Min</span>(MaxHealth, CurrentHealth + Amount);
+    <span class="keyword">float</span> Delta = CurrentHealth - PreviousHealth;
+    
+    OnHealthChanged.<span class="method">Broadcast</span>(<span class="keyword">this</span>, CurrentHealth, MaxHealth, Delta, Instigator);
+    
+    <span class="keyword">return</span> Delta;
+}</code></pre>
+</div>
+                            </div>
+                        </div>
+
+                        <div class="fs-6 mt-5">
+                            <p>
+                                To deal damage I use the hitbox method. The hitbox is part of my weapon class.
+                                The hitbox is activated and deactivated by an anim notify state that the attack animation has to set in order to deal damage.
+                                I use another anim notify state to activate and deactivate a weapon trail.
+                                The aforementioned damageable interface is what registers legal hit targets.
+                            </p>
+                        </div>
+
+                        <!-- Code Snippet -->
+                        <div class="mt-3">
+                            <button class="btn btn-outline-secondary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#codeSnippetMelee" aria-expanded="false" aria-controls="codeSnippetMelee">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
+                                    <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z"/>
+                                </svg>
+                                Melee Weapon
+                            </button>
+                            <div class="collapse mt-3" id="codeSnippetMelee">
+<div class="code-example">
+<pre><code><span class="comment">// Melee weapon hitbox and damage detection system</span>
+<span class="keyword">void</span> AAsgardMeleeWeapon::<span class="method">EnableHitbox</span>()
+{
+    HitActorsThisAttack.<span class="method">Empty</span>();
+    Hitbox-&gt;<span class="method">SetCollisionEnabled</span>(ECollisionEnabled::QueryOnly);
+    <span class="method">ActivateTrail</span>();
+}
+
+<span class="keyword">void</span> AAsgardMeleeWeapon::<span class="method">DisableHitbox</span>()
+{
+    Hitbox-&gt;<span class="method">SetCollisionEnabled</span>(ECollisionEnabled::NoCollision);
+    HitActorsThisAttack.<span class="method">Empty</span>();
+    <span class="method">DeactivateTrail</span>();
+}
+
+<span class="keyword">void</span> AAsgardMeleeWeapon::<span class="method">OnHitboxOverlap</span>(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, 
+    UPrimitiveComponent* OtherComp, <span class="keyword">int32</span> OtherBodyIndex, <span class="keyword">bool</span> bFromSweep, 
+    <span class="keyword">const</span> FHitResult&amp; SweepResult)
+{
+    <span class="comment">// Ignore self-hits and duplicate hits during same attack</span>
+    <span class="keyword">if</span> (OtherActor == <span class="method">GetOwner</span>() || OtherActor == <span class="keyword">this</span> || 
+        HitActorsThisAttack.<span class="method">Contains</span>(OtherActor))
+    {
+        <span class="keyword">return</span>;
+    }
+    
+    HitActorsThisAttack.<span class="method">Add</span>(OtherActor);
+    <span class="method">TryDealDamage</span>(OtherActor, BaseDamage, SweepResult);
+}
+
+<span class="keyword">bool</span> AAsgardMeleeWeapon::<span class="method">TryDealDamage</span>(AActor* Target, <span class="keyword">float</span> DamageAmount, 
+    <span class="keyword">const</span> FHitResult&amp; HitResult)
+{
+    <span class="keyword">if</span> (Target &amp;&amp; Target-&gt;<span class="method">Implements</span>&lt;UAsgardDamageable&gt;())
+    {
+        FDamageInfo DamageInfo;
+        DamageInfo.DamageAmount = DamageAmount;
+        DamageInfo.HitResult = HitResult;
+        DamageInfo.Instigator = <span class="method">GetOwner</span>();
+        DamageInfo.DamageCauser = <span class="keyword">this</span>;
+        
+        IAsgardDamageable::<span class="method">Execute_TakeDamage</span>(Target, DamageInfo);
+        <span class="keyword">return</span> <span class="keyword">true</span>;
+    }
+    <span class="keyword">return</span> <span class="keyword">false</span>;
+}</code></pre>
+</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
 
                 <hr class="my-4">
 
