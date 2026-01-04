@@ -179,12 +179,7 @@ html {
 
 }
 
-.collapse {
-    transition: none !important;
-    -webkit-transition: none !important;
-}
-
-.collapsing {
+.code-collapse.collapsing {
     transition: none !important;
     -webkit-transition: none !important;
 }
